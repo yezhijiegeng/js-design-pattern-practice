@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var renderMap = function(map){
+            if(map.show instanceof Function) {
+                map.show()
+            }
+        }
+
+        var sosoMap = {
+            show:function(){
+                console.log("开始渲染搜搜地图");
+            }
+        }
+
+        var googleMap = {
+            show:function(){
+                console.log("开始渲染谷歌地图");
+            }
+        }
+
+
+        renderMap(sosoMap)
+        renderMap(googleMap)
+
+
+        
+    </script>
+</body>
+</html>

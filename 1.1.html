@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var duck = {
+            duckSing:function(){
+                console.log('嘎嘎嘎');
+            }
+        }
+        var chiken = {
+            duckSing:function(){
+                console.log('嘎嘎嘎');
+            }
+        }
+        var choir = [];
+        function welcome (animal){
+            if( animal && typeof animal.duckSing ==='function'){
+                choir.push(animal);
+                console.log("恭喜加入合唱团");
+                console.log("合唱团已有人数：", choir.length)
+            }
+        }
+
+        welcome(duck);
+        welcome(chiken);
+
+    </script>
+</body>
+</html>

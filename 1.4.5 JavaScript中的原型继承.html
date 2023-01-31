@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 1. 所有的数据都是对象  */
+        var obj1 = new Object();
+        var obj2 = {};
+        console.log(Object.getPrototypeOf(obj1)===Object.prototype); // true
+        console.log(Object.getPrototypeOf(obj2)===Object.prototype); // true
+
+        /* 2. 要得到一个对象，不是通过实例化类，而是找到一个对象作为原型并克隆它 */
+        function Person(name) {
+            this.name = name;
+        }
+        Person.prototype.getName= function(){
+            return this.name;
+        }
+        var a = new Person('seven');
+        console.log(a.name); // seven
+        console.log(a.getName()); // seven
+        console.log(Object.getPrototypeOf(a)===Person.prototype); // true
+
+        
+
+    </script>
+</body>
+</html>

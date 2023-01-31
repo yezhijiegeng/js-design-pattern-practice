@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* 4. 如果对象无法响应某个请求，它会把这个请求委托给它的构造器的原型 */
+        /* var obj = {name:'seven'}
+        var A = function(){}
+        A.prototype = obj;
+        var a = new A();
+        console.log(a.name); */
+
+        /* 当我们期望得到一个“类”继承自另外一个“类”的效果时: */
+
+        var A = function(){}
+        A.prototype = {name:'seven'}
+        var B = function(){}
+        B.prototype = new A;
+
+        var b = new B();
+        console.log(b.name); // seven
+        
+
+
+    </script>
+</body>
+</html>
